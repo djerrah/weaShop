@@ -1,0 +1,11 @@
+export TERM="xterm-256color"
+  export ZSH=/usr/local/etc/oh-my-zsh
+ZSH_THEME="docker"
+export UPDATE_ZSH_DAYS=2
+plugins=(git docker docker-compose cp debian history man npm symfony2 vim-interaction)
+  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+source $ZSH/oh-my-zsh.sh
+alias ll="ls -l"
+alias l="ls -lah"
+alias sf3="./bin/console"
+alias sf="./app/console"
