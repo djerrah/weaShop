@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/api')]
+#[Route('/api/v1')]
 class WeatherProductsController extends AbstractController
 {
     #[Route('/weather/products', name: 'app_weather_products', methods: 'GET')]
-    public function index(): JsonResponse
+    public function getProducts(): JsonResponse
     {
         $data = ['message' => 'Welcome to your API!'];
 
