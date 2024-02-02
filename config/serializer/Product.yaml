@@ -1,0 +1,8 @@
+App\Entity\Product:
+  attributes:
+    id:
+      groups: ['read']
+    name:
+      groups: ['read']
+    price:
+      groups: ['read']

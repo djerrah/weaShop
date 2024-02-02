@@ -6,6 +6,7 @@ use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Ignore;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 class Product
@@ -22,6 +23,7 @@ class Product
     private ?float $price = null;
 
     #[ORM\ManyToMany(targetEntity: Weather::class, inversedBy: 'products')]
+    #[Ignore]
     private Collection $weather;
 
     public function __construct(string $name, float $price)
